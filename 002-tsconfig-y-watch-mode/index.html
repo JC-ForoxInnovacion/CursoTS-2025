@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CursoTS</title>
+</head>
+<body>
+  <h1>tsconfig.json y watch mode</h1>
+  <h2>002-tsconfig-y-watch-mode</h2>
+
+  <article id="tsconfig">
+    <header>
+      <h3>tsconfig.json</h3>
+    </header>
+
+    <p>Para crear el archivo <strong>tsconfig.json</strong> debemos inicializar TypeScript en nuestro proyecto (directorio raíz)</p>
+
+    <pre>
+      Comando:
+
+        tsc --init
+    </pre>
+  </article>
+
+<article id="watch">
+  <header>
+    <h3>watch mode</h3>
+  </header>
+
+  <p>TypeScript posee un <strong>modo observador</strong> que una vez activado monitoriza los cambios realizados en nuestros archivos .ts y los transpila automáticamente</p>
+
+  <pre>
+    Comando:
+
+      tsc --watch
+
+      tsc -w
+  </pre>
+
+</article>
+  
+  <script src="app.js" type="module"></script>
+</body>
+</html>
