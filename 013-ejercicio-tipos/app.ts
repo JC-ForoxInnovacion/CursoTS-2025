@@ -1,39 +1,52 @@
 (() => {
 
     // Tipos
-    const batman = 'Bruce';
-    const superman = 'Clark';
+    const batman:string = 'Bruce';
+    const superman:string = 'Clark';
   
-    const existe = false;
+    const existe:boolean = false;
   
     // Tuplas
-    const parejaHeroes = [batman,superman];
-    const villano = ['Lex Lutor',5,true];
-  
+    const parejaHeroes: [string, string] = [batman,superman];
+    //const parejaHeroes: [string, string] = [batman,superman] as const;
+    // const parejaHeroes = [batman,superman] as const;
+    parejaHeroes[0] = "Pepeman";
+    console.log({parejaHeroes}, typeof parejaHeroes);
+    
+    const villano: [string, number, boolean] = ['Lex Lutor', 5, true];
+    
     // Arreglos
-    const aliados = ['Mujer Maravilla','Acuaman','San', 'Flash'];
+    const aliados:string[] = ['Mujer Maravilla','Acuaman','San', 'Flash'];
   
     //Enumeraciones
-    const fuerzaFlash = 5;
-    const fuerzaSuperman = 100;
-    const fuerzaBatman = 1;
-    const fuerzaAcuaman = 0;
+
+    enum fuerza {
+      acuaman = 0,    
+      batman = 1,
+      flash = 5,
+      superman = 100
+    }
+
+    const fuerzaFlash: fuerza = fuerza.flash;
+    const fuerzaSuperman: fuerza = fuerza.superman;
+    const fuerzaBatman: fuerza = fuerza.batman;
+    const fuerzaAcuaman: fuerza = fuerza.acuaman;
   
     // Retorno de funciones
-    function activar_batiseñal(){
+    function activar_batiseñal(): string {
       return 'activada';
     }
   
-    function pedir_ayuda(){
+    function pedir_ayuda (): void{
       console.log('Auxilio!!!');
     }
   
     // Aserciones de Tipo
     const poder: any = '100';
-    const largoDelPoder:number = poder.length;
+    const largoDelPoder: number = String(poder).length;
     console.log( largoDelPoder );
   
   
-  })()
+  })();
   
   
