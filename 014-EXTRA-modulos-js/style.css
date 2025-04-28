@@ -1,0 +1,55 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  }
+  /* Contenedor principal */
+  header, main, footer {
+  width: 100%;
+  max-width: 600px;
+  }
+  /* Centrar contenido del footer */
+  footer {
+  text-align: center;
+  }
+  /* Estilos de los botones */
+  .botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  }
+  .botones button {
+  flex: 1 1 45%;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s;
+  }
+  .botones button:hover {
+  background-color: #45a049;
+  }
+  /* Estilos del contenedor de mensajes */
+  #mensajes {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 50px;
+  background-color: #f9f9f9;
+  }
+  /* Responsivo para móviles */
+  @media (max-width: 400px) {
+  .botones button {
+  flex: 1 1 100%;
+  }
+}
