@@ -2,23 +2,55 @@
 import * as sep from './separadores.js';
 sep.sepCorto();
 function isEmptyStringParam(param) {
-    if (param.length > 0) {
-        return true;
-    }
-    else {
-        return false;
-    }
-    // return param.length > 0;
+    // if (param.length > 0) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+    /**
+     * Alternativa IMPLICITA al if .. else
+     *
+     * return param.length > 0;
+     */
+    return param.length > 0 && param !== 'null'; // true | false
 }
 const fullName = ((firstName, lastName) => {
     let resEvalName = {
-        firstName: isEmptyStringParam(firstName),
-        lastName: isEmptyStringParam(lastName),
+        boolFirstName: isEmptyStringParam(firstName),
+        boolLastName: isEmptyStringParam(lastName),
     };
-    return `${firstName} ${lastName}`;
+    console.log("resEvalName:", resEvalName);
+    if (resEvalName.boolFirstName && resEvalName.boolLastName) {
+        return `${firstName} ${lastName}`;
+    }
+    else {
+        if (!resEvalName.boolFirstName && !resEvalName.boolLastName) {
+            return 'No has proporcionado ni el nombre ni el apellido';
+        }
+        else if (!resEvalName.boolFirstName) {
+            return 'No has proporcionado el nombre';
+        }
+        else if (!resEvalName.boolLastName) {
+            return 'No has proporcionado el apellido';
+        }
+    }
 });
-let res = fullName("JC", "Varela Iglesias");
-console.log({ res });
-if (!firstName || !lastName) {
-    throw new Error('Nombre y/o Apellido requeridos');
-}
+let firstName;
+let lastName;
+let cont;
+let res;
+do {
+    firstName = String(prompt('Nombre:'));
+    lastName = String(prompt('Apellido:'));
+    res = fullName(firstName, lastName);
+    console.log(res);
+    cont = prompt('Desea continuar [s/n]');
+} while (cont === 's' || cont === 'S');
+/**
+ * Alternativa para evaluar los parámetros vacíos arrojando
+ * un error y deteniendo la aplicación
+ *
+ * if (!firstName || !lastName) {
+ *   tSeridos')
+ * }
+ */ 
