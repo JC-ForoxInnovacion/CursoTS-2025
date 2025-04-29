@@ -1,7 +1,8 @@
 // import { sepCorto, sepLargo } from "./separadores.js";
 
 import * as sep from './separadores.js'
-sep.sepCorto()
+
+sep.sepCorto();
 
 function isEmptyStringParam(param:string): boolean {
   // if (param.length > 0) {
@@ -20,7 +21,7 @@ function isEmptyStringParam(param:string): boolean {
   return param.length > 0 && param !== 'null'; // true | false
 }
 
-const fullName = ((firstName: string, lastName:(string)):string => {
+const fullName = (firstName: string, lastName: string):string => {
   let resEvalName = {
     boolFirstName: isEmptyStringParam(firstName),
     boolLastName: isEmptyStringParam(lastName),
@@ -39,7 +40,7 @@ const fullName = ((firstName: string, lastName:(string)):string => {
         return 'No has proporcionado el apellido'
       }
  }
-});
+};
 
 let firstName: (string | null);
 let lastName: (string | null);
@@ -64,6 +65,7 @@ do {
  * un error y deteniendo la aplicación
  * 
  * if (!firstName || !lastName) {
- *   tSeridos')
+ *   throw new Error('No has proporcionado nombre y/o apellidos')
  * } 
  */
+ 

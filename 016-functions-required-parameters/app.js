@@ -14,7 +14,7 @@ function isEmptyStringParam(param) {
      */
     return param.length > 0 && param !== 'null'; // true | false
 }
-const fullName = ((firstName, lastName) => {
+const fullName = (firstName, lastName) => {
     let resEvalName = {
         boolFirstName: isEmptyStringParam(firstName),
         boolLastName: isEmptyStringParam(lastName),
@@ -34,7 +34,7 @@ const fullName = ((firstName, lastName) => {
             return 'No has proporcionado el apellido';
         }
     }
-});
+};
 let firstName;
 let lastName;
 let cont;
@@ -51,6 +51,6 @@ do {
  * un error y deteniendo la aplicación
  *
  * if (!firstName || !lastName) {
- *   tSeridos')
+ *   throw new Error('No has proporcionado nombre y/o apellidos')
  * }
- */ 
+ */
