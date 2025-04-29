@@ -1,5 +1,13 @@
 // import { sepCorto, sepLargo } from "./separadores.js";
-function isEmptyStringParam(param) {
+import * as sep from './separadores.js';
+let firstName;
+let lastName;
+let cont;
+let res;
+let strFirstName;
+let strLastName;
+sep.sepCorto();
+function isValidStringParam(param) {
     return param.length > 0 && param !== 'null'; // true | false
 }
 function fullName(firstName, lastName) {
@@ -15,45 +23,31 @@ function errorEvaluation(boolFirstName, boolLastName) {
     else if (!boolLastName) {
         return "Falta apellidos";
     }
+    return "No hay errores: Nombre y apellido válidos";
 }
 function showMessage(msg) {
     console.log(msg || "no Message"); // <= opcional :))))
 }
-let firstName;
-let lastName;
-let cont;
-let res;
-let strFirstName;
-let strLastName;
-//do {
-// Solicitar datos al usuario
-firstName = prompt('Nombre:');
-lastName = prompt('Apellido:');
-strFirstName = String(firstName);
-strLastName = String(lastName);
-// Construimod objeto con validación
-let resEvalName = {
-    boolFirstName: isEmptyStringParam(strFirstName),
-    boolLastName: isEmptyStringParam(strLastName),
-};
-console.log(resEvalName);
-if (resEvalName.boolFirstName && resEvalName.boolLastName) {
-    res = fullName(strFirstName, strLastName);
-}
-else {
-    // throw new Error("Cuñao!, esto ha petao!!!");
-    res = errorEvaluation(resEvalName.boolFirstName, resEvalName.boolLastName);
+do {
+    firstName = prompt('Nombre:');
+    lastName = prompt('Apellido:');
+    strFirstName = String(firstName);
+    strLastName = String(lastName);
+    // Construimos objeto con validación
+    let resEvalName = {
+        boolFirstName: isValidStringParam(strFirstName),
+        boolLastName: isValidStringParam(strLastName),
+    };
+    console.log(resEvalName);
+    if (resEvalName.boolFirstName && resEvalName.boolLastName) {
+        res = fullName(strFirstName, strLastName);
+    }
+    else {
+        // throw new Error("Cuñao!, esto ha petao!!!");
+        res = errorEvaluation(resEvalName.boolFirstName, resEvalName.boolLastName);
+    }
     showMessage(res);
-}
-showMessage();
-export {};
-//cont = prompt('Desea continuar [s/n]')
-//} while (cont === 's' || cont === 'S');
-/**
- * Alternativa para evaluar los parámetros vacíos arrojando
- * un error y deteniendo la aplicación
- *
- * if (!firstName || !lastName) {
- *   throw new Error('No has proporcionado nombre y/o apellidos')
- * }
- */
+    showMessage(); // <= Llamada sin argumentos 
+    //    (parámetro opcional en la función)
+    cont = prompt('Desea continuar [s/n]');
+} while (cont === 's' || cont === 'S');
