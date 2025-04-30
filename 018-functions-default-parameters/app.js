@@ -30,7 +30,7 @@ function myFunction(param_obligatorio, param_opcional, param_porDefecto = false)
 // a este parámetro 
 let resF = myFunction("Hola!", "Carolina");
 console.log(resF);
-resF = myFunction("Hola!", "Carolina");
+resF = myFunction("Hola!", "Carolina", true);
 console.log(resF);
 let { param_obligatorio, param_opcional, param_porDefecto } = resF;
 console.log(param_obligatorio);

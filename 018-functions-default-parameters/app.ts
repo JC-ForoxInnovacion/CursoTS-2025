@@ -46,7 +46,7 @@ function myFunction(
 let resF = myFunction("Hola!", "Carolina");
 console.log(resF);
 
-resF = myFunction("Hola!", "Carolina");
+resF = myFunction("Hola!", "Carolina", true);
 console.log(resF);
 
 let {param_obligatorio, param_opcional, param_porDefecto} = resF;
