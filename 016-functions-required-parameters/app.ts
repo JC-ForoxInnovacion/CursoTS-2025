@@ -39,8 +39,10 @@ const fullName = (firstName: string, lastName: string):string => {
       } else if (!resEvalName.boolLastName) {
         return 'No has proporcionado el apellido'
       }
- }
-};
+    }
+   
+    return 'No se han producido errores'
+}
 
 let firstName: (string | null);
 let lastName: (string | null);
