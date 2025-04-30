@@ -4,7 +4,7 @@ import * as sep from './separadores.js'
 
 sep.sepCorto();
 
-function isEmptyStringParam(param:string): boolean {
+function isValidStringParam(param:string): boolean {
   // if (param.length > 0) {
   //   return true;
   // } else {
@@ -23,8 +23,8 @@ function isEmptyStringParam(param:string): boolean {
 
 const fullName = (firstName: string, lastName: string):string => {
   let resEvalName = {
-    boolFirstName: isEmptyStringParam(firstName),
-    boolLastName: isEmptyStringParam(lastName),
+    boolFirstName: isValidStringParam(firstName),
+    boolLastName: isValidStringParam(lastName),
   }
 
   console.log("resEvalName:", resEvalName);
