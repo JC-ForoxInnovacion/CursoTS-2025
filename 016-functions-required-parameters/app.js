@@ -1,7 +1,7 @@
 // import { sepCorto, sepLargo } from "./separadores.js";
 import * as sep from './separadores.js';
 sep.sepCorto();
-function isEmptyStringParam(param) {
+function isValidStringParam(param) {
     // if (param.length > 0) {
     //   return true;
     // } else {
@@ -16,8 +16,8 @@ function isEmptyStringParam(param) {
 }
 const fullName = (firstName, lastName) => {
     let resEvalName = {
-        boolFirstName: isEmptyStringParam(firstName),
-        boolLastName: isEmptyStringParam(lastName),
+        boolFirstName: isValidStringParam(firstName),
+        boolLastName: isValidStringParam(lastName),
     };
     console.log("resEvalName:", resEvalName);
     if (resEvalName.boolFirstName && resEvalName.boolLastName) {
@@ -34,6 +34,7 @@ const fullName = (firstName, lastName) => {
             return 'No has proporcionado el apellido';
         }
     }
+    return 'No se han producido errores';
 };
 let firstName;
 let lastName;
