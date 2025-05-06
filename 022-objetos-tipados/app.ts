@@ -60,12 +60,12 @@ type Person = {
   familyName: string,
   age: number,
   hasCar: boolean;
-  carColor?: string,
-  getCarColor?: () => (string);
+  carColor: (string|null),
+  getCarColor: () => (string|null);
   }
 
 
-let persona1 = {
+let persona1: Person = {
   name: "Persona",
   familyName: "Uno",
   age: 25,
@@ -81,11 +81,12 @@ res = persona1.getCarColor()
 console.log({res});
 
 
-let persona2 = {
+let persona2: Person = {
   name: "Persona",
   familyName: "Dos",
   age: 18,
   hasCar: false,
+  carColor: null,
   getCarColor: function () {
     return this.carColor;
   }

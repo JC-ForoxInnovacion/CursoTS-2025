@@ -53,6 +53,7 @@
         familyName: "Dos",
         age: 18,
         hasCar: false,
+        carColor: null,
         getCarColor: function () {
             return this.carColor;
         }
