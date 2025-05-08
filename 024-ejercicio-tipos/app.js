@@ -52,3 +52,4 @@
         poder: "Maquillaje",
     };
 })();
+//# sourceMappingURL=app.js.map
