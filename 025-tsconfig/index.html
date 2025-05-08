@@ -24,6 +24,25 @@
       <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html" target="_blank">Documentación oficial tsconfig</a>
     </section>
     
+    <section>
+      <article>
+        <header>
+          <h1>1. Depuración con TS</h1>
+        </header>
+          
+          <p>Las refencias a líneas de código en consola se muestran con relación al archivo transpilado a .js, pero no coinciden con el número de línea del archivo .ts
+          </p>
+          
+          <p>
+            Para referenciar correctamente los números de línea al archivo.ts activar esta la configuración en tsconfig.json
+
+            <pre>
+              "sourceMap": true,
+            </pre>
+          </p>
+      </article>
+    </section>
+    
     
     <script src="app.js" type="module"></script>
   </body>
