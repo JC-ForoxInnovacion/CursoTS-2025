@@ -19,3 +19,4 @@ let tipo = (() => {
 let resTipo;
 resTipo = tipo();
 console.log({ resTipo }, typeof resTipo);
+//# sourceMappingURL=app.js.map

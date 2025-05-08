@@ -51,3 +51,4 @@ do {
     //    (parámetro opcional en la función)
     cont = prompt('Desea continuar [s/n]');
 } while (cont === 's' || cont === 'S');
+//# sourceMappingURL=app.js.map

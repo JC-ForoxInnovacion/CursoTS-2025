@@ -52,3 +52,4 @@ res = (() => {
     return;
 })();
 console.log({ res }, typeof res);
+//# sourceMappingURL=app.js.map

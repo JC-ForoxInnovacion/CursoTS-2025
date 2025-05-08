@@ -42,3 +42,4 @@ function construirMensaje(data, res) {
     console.log(construirMensaje(data, res));
     console.log(dataString.charAt(2));
 })();
+//# sourceMappingURL=app.js.map

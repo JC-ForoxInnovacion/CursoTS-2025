@@ -22,3 +22,4 @@
     // arrStrings.forEach((string) => console.log(string.toLowerCase()));
     arrStrings.forEach(string => console.log(string.toUpperCase()));
 })();
+//# sourceMappingURL=app.js.map

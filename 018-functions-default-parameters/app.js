@@ -35,3 +35,4 @@ console.log(resF);
 let { param_obligatorio, param_opcional, param_porDefecto } = resF;
 console.log(param_obligatorio);
 showFormatMessage(param_obligatorio, param_opcional, param_porDefecto);
+//# sourceMappingURL=app.js.map

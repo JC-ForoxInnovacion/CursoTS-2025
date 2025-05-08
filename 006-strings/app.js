@@ -36,3 +36,4 @@
      */
     console.log(((_e = KONSTANTE4[i]) === null || _e === void 0 ? void 0 : _e.toUpperCase()) && " quién lo diría!");
 })();
+//# sourceMappingURL=app.js.map

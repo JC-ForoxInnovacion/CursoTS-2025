@@ -40,3 +40,4 @@ personas = Number(5 + 5);
 console.log({ personas });
 personas = Number(5 + "5A");
 console.log({ personas });
+//# sourceMappingURL=app.js.map

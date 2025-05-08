@@ -27,3 +27,4 @@
     resFullName = fullNameREST(resName, resFamilyName);
     console.log({ resFullName });
 })();
+//# sourceMappingURL=app.js.map

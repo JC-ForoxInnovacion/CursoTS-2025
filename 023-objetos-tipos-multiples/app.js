@@ -19,3 +19,4 @@
     console.log({ persona }, typeof persona);
 })();
 export {};
+//# sourceMappingURL=app.js.map

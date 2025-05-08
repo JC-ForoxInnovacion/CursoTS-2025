@@ -97,3 +97,4 @@ import { sepCorto } from "./separadores.js";
     let myARR;
     myARR = [1, 2, 3];
 })();
+//# sourceMappingURL=app.js.map

@@ -23,3 +23,4 @@ function myFunction(param) {
     console.log(param);
 }
 myFunction("Hola");
+//# sourceMappingURL=app.js.map
