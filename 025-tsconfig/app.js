@@ -1,5 +1,4 @@
 "use strict";
-// Objetos
 (() => {
     const batimovil = {
         carroceria: "Negra",
@@ -13,7 +12,6 @@
         antibalas: true,
         pasajeros: 4,
         disparar() {
-            // El metodo disparar es opcional
             console.log("Disparando");
         },
     };
@@ -43,7 +41,6 @@
         miembros: ["Magneto", "Tormenta", "Psylocke", "Angel"],
     };
     console.log({ apocalipsis });
-    // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
     let mystique;
     mystique = charles;
     mystique = apocalipsis;

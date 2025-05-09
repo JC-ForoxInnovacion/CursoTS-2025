@@ -25,7 +25,7 @@
     </section>
     
     <section>
-      <article>
+      <article id="depuracion">
         <header>
           <h1>1. Depuración con TS</h1>
         </header>
@@ -34,10 +34,23 @@
           </p>
           
           <p>
-            Para referenciar correctamente los números de línea al archivo.ts activar esta la configuración en tsconfig.json
+            Para referenciar correctamente los números de línea al archivo.ts activar esta la configuración:
 
             <pre>
               "sourceMap": true,
+            </pre>
+          </p>
+      </article>
+
+      <article id="comentarios">
+        <header>
+          <h1>2. Eliminar comentarios en archivo .js</h1>
+        </header>
+          <p>
+            Para eliminar los comentarios del archivo.ts al transpilar a .js, activar la siguiente configuración:
+
+            <pre>
+              "removeComments": true,
             </pre>
           </p>
       </article>
