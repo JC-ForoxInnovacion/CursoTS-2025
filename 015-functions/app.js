@@ -2,9 +2,9 @@ import * as separadores from './separadores.js';
 console.log("Función clasica sin argumentos que accede a una variable del scope superior");
 separadores.sepLargo();
 (() => {
-    const nombrePersona = "Cristina"; // Está en el scope superior de la función
+    const nombrePersona = "Cristina";
     function returnName() {
-        return nombrePersona; // Se puede alcanzar 
+        return nombrePersona;
     }
     separadores.sepCorto();
     const consultarAyuda = () => {

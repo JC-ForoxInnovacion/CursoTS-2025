@@ -1,5 +1,4 @@
 "use strict";
-// import { sepCorto, sepLargo } from "./separadores.js";
 function tipoDato(param) {
     return typeof param;
 }
@@ -14,9 +13,6 @@ function construirMensaje(data, res) {
     data = 123;
     data = null;
     data = undefined;
-    // data = Symbol('MiSimbolo');
-    // data = [1,2,3,4,5];
-    // data = {key1: "Valor 1", key2: "Valor 2" };
     res = tipoDato(data);
     console.log(construirMensaje(data, res));
     data = 1234567;
@@ -28,7 +24,6 @@ function construirMensaje(data, res) {
     console.log({ dataString });
     res = tipoDato(dataString);
     console.log(construirMensaje(data, res));
-    // console.log(dataString.charAt(0)); // Error ya que no se efectúa Casting
     console.log('--- <string>variable');
     dataString = data;
     console.log({ dataString });

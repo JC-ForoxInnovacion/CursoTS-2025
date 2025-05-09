@@ -1,18 +1,7 @@
-// import { sepCorto, sepLargo } from "./separadores.js";
 import * as sep from './separadores.js';
 sep.sepCorto();
 function isValidStringParam(param) {
-    // if (param.length > 0) {
-    //   return true;
-    // } else {
-    //   return false;
-    // }
-    /**
-     * Alternativa IMPLICITA al if .. else
-     *
-     * return param.length > 0;
-     */
-    return param.length > 0 && param !== 'null'; // true | false
+    return param.length > 0 && param !== 'null';
 }
 const fullName = (firstName, lastName) => {
     let resEvalName = {
@@ -47,12 +36,4 @@ do {
     console.log(res);
     cont = prompt('Desea continuar [s/n]');
 } while (cont === 's' || cont === 'S');
-/**
- * Alternativa para evaluar los parámetros vacíos arrojando
- * un error y deteniendo la aplicación
- *
- * if (!firstName || !lastName) {
- *   throw new Error('No has proporcionado nombre y/o apellidos')
- * }
- */
 //# sourceMappingURL=app.js.map

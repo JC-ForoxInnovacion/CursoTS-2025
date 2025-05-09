@@ -1,4 +1,3 @@
-// import { sepCorto, sepLargo } from "./separadores.js";
 import * as sep from './separadores.js';
 let firstName;
 let lastName;
@@ -8,7 +7,7 @@ let strFirstName;
 let strLastName;
 sep.sepCorto();
 function isValidStringParam(param) {
-    return param.length > 0 && param !== 'null'; // true | false
+    return param.length > 0 && param !== 'null';
 }
 function fullName(firstName, lastName) {
     return `${firstName} ${lastName}`;
@@ -26,14 +25,13 @@ function errorEvaluation(boolFirstName, boolLastName) {
     return "No hay errores: Nombre y apellido válidos";
 }
 function showMessage(msg) {
-    console.log(msg || "no Message"); // <= opcional :))))
+    console.log(msg || "no Message");
 }
 do {
     firstName = prompt('Nombre:');
     lastName = prompt('Apellido:');
     strFirstName = String(firstName);
     strLastName = String(lastName);
-    // Construimos objeto con validación
     let resEvalName = {
         boolFirstName: isValidStringParam(strFirstName),
         boolLastName: isValidStringParam(strLastName),
@@ -43,12 +41,10 @@ do {
         res = fullName(strFirstName, strLastName);
     }
     else {
-        // throw new Error("Cuñao!, esto ha petao!!!");
         res = errorEvaluation(resEvalName.boolFirstName, resEvalName.boolLastName);
     }
     showMessage(res);
-    showMessage(); // <= Llamada sin argumentos 
-    //    (parámetro opcional en la función)
+    showMessage();
     cont = prompt('Desea continuar [s/n]');
 } while (cont === 's' || cont === 'S');
 //# sourceMappingURL=app.js.map
