@@ -54,6 +54,36 @@
             </pre>
           </p>
       </article>
+
+      <article id="incluir_excluir">
+        <header>
+          <h1>3. Incluir / Excluir carpetas y/o archivos </h1>
+        </header>
+          <p>
+            Para incluir y/o excluir carpetas y/o archivos debemos añadir las propiedades "include": [] / "exclude": [] despues del cierre de objeto principal.
+
+            <pre>
+              {
+                "compilerOptions": {
+                  /* Visit https://aka.ms/tsconfig to read more about this file */
+              
+                  /* Projects */
+                  // "incremental": true, 
+
+                  ...
+
+                  /* Completeness */
+                  // "skipDefaultLibCheck": true,    /* Skip type checking .d.ts files ... */
+                  "skipLibCheck": true               /* Skip type checking all .d.ts files ... */
+                },
+                "include": [],
+                "exclude": [
+                  "my_node_modules"
+                ]
+              }
+            </pre>
+          </p>
+      </article>
     </section>
     
     
