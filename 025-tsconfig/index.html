@@ -3,65 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="w3.css">
     <title>CursoTS</title>
   </head>
   <body>
-    <h1>tsconfig.json</h1>
-    <h2>025-tsconfig</h2>
+    <main>
+      <h1>tsconfig.json</h1>
+      <h2>025-tsconfig</h2>
 
-    <section>
-      <h2>Backup tsconfig.json</h2>
-
-      <p>
-        Antes de realizar cualquier cambio, como medida de seguridad, deberías
-        hacer una copia de seguridad del archivo tsconfig.json
-      </p>
-
-      <p>YYYY-MM-DD_HH.MM-tsconfig.json.txt</p>
-
-      <p>Para restaurarla, borra el tsconfig.json y renombra el archivo de backup que has creado.</p>
-
-      <a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html" target="_blank">Documentación oficial tsconfig</a>
-    </section>
-    
-    <section>
-      <article id="depuracion">
+      <section id="backup_tsconfig">
         <header>
-          <h1>1. Depuración con TS</h1>
+          <h2>Backup tsconfig.json</h2>
         </header>
-          
-          <p>Las refencias a líneas de código en consola se muestran con relación al archivo transpilado a .js, pero no coinciden con el número de línea del archivo .ts
-          </p>
-          
-          <p>
-            Para referenciar correctamente los números de línea al archivo.ts activar esta la configuración:
-
+  
+        <p>
+          Antes de realizar cualquier cambio, como medida de seguridad, deberías 
+          hacer una copia de seguridad del archivo tsconfig.json (mientras no te sientas segur@ de lo que haces)
+        </p>
+  
+        <p>YYYY-MM-DD_HH.MM-tsconfig.json.txt</p>
+  
+        <p>Para restaurarla, borra el tsconfig.json y renombra el archivo de backup que has creado.</p>
+  
+        <p><a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html" target="_blank">Documentación oficial tsconfig</a></p>
+      </section>
+      
+      <section id="configuraciones_tsconfig">
+        <article id="depuracion">
+          <header>
+            <h1>1. Depuración con TS</h1>
+          </header>
+            
+            <p>Las refencias a líneas de código en consola se muestran con relación al archivo transpilado a .js, pero no coinciden con el número de línea del archivo .ts
+            </p>
+            
+            <p>
+              Para referenciar correctamente los números de línea al archivo.ts activar esta la configuración:
+            </p>
             <pre>
               "sourceMap": true,
             </pre>
-          </p>
-      </article>
-
-      <article id="comentarios">
-        <header>
-          <h1>2. Eliminar comentarios en archivo .js</h1>
-        </header>
-          <p>
-            Para eliminar los comentarios del archivo.ts al transpilar a .js, activar la siguiente configuración:
-
+        </article>
+  
+        <article id="comentarios">
+          <header>
+            <h1>2. Eliminar comentarios en archivo .js</h1>
+          </header>
+            <p>
+              Para eliminar los comentarios del archivo.ts al transpilar a .js, activar la siguiente configuración:
+            </p>
             <pre>
               "removeComments": true,
             </pre>
-          </p>
-      </article>
-
-      <article id="incluir_excluir">
-        <header>
-          <h1>3. Incluir / Excluir carpetas y/o archivos </h1>
-        </header>
-          <p>
-            Para incluir y/o excluir carpetas y/o archivos debemos añadir las propiedades "include": [] / "exclude": [] despues del cierre de objeto principal.
-
+        </article>
+  
+        <article id="incluir_excluir">
+          <header>
+            <h1>3. Incluir / Excluir carpetas y/o archivos </h1>
+          </header>
+            <p>
+              Para incluir y/o excluir carpetas y/o archivos debemos añadir las propiedades "include": [] / "exclude": [] despues del cierre de objeto principal.
+            </p>              
             <pre>
               {
                 "compilerOptions": {
@@ -82,9 +84,66 @@
                 ]
               }
             </pre>
-          </p>
-      </article>
-    </section>
+
+        </article>
+
+        <article id="configuracion_salida">
+          <header>
+            <h1>4. Configurar carpetas y/o archivos salida </h1>
+          </header>
+            <p>
+              La propiedad "outFile": "app/main.js" especifica el nombre y ruta de archivo de salida 
+            </p>
+            
+            <p>
+              La propiedad "outDir": "app": especifica el directorio de salida.
+            </p>              
+            <pre>
+              {
+                "compilerOptions": {
+                  /* Visit https://aka.ms/tsconfig to read more about this file */
+              
+                  /* Projects */
+                  
+                  ...
+
+
+                  /* Language and Environment */
+                  "target": "es2016",
+
+                  ...
+
+                  /* Modules */
+                  "module": "amd",  
+
+                  ...
+
+                  /* Emit */
+                  
+                  ...
+                  
+                  "outFile": "app/main.js",  /* Specify a file that bundles all outputs 
+                                                into one JavaScript file. If 'declaration' 
+                                                is true, also designates a file that bundles 
+                                                all .d.ts output. */
+                                                
+                  "outDir": "app",           /* Specify an output folder for all emitted files. */
+
+                  ...
+
+                },
+                // "include": [],
+                "exclude": [
+                  "my_node_modules"
+                ]
+              }
+            </pre>
+
+        </article>
+      </section>
+
+    </main>
+
     
     
     <script src="app.js" type="module"></script>
