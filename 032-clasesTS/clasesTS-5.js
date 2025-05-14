@@ -22,9 +22,15 @@ import { sepLargo } from "./separadores.js";
         }
         metodoDescripcionEstatica() {
             console.log('Estoy en el metodoDescripcionEstatica()');
-            function mostrar() {
+            function mostrar1() {
                 console.log('Método funcionDescripcionEstatica() / función mostrar(): ', StringData.descripcion);
             }
+            ;
+            mostrar1();
+            mostrar2: () => { };
+            (() => {
+                console.log('Método funcionDescripcionEstatica() / función mostrar() AUTOINVOCADA: ', StringData.descripcion);
+            })();
         }
     }
     StringData.descripcion = 'Clase que transforma un texto ... ';
@@ -39,6 +45,6 @@ import { sepLargo } from "./separadores.js";
     texto2.mostrarOutput();
     console.log(StringData.descripcion);
     StringData.mostrarDescripcion();
-    texto2.metodoDescripcionEstatica().mostrar();
+    texto2.metodoDescripcionEstatica();
 })();
 //# sourceMappingURL=clasesTS-5.js.map

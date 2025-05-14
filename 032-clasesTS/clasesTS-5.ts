@@ -31,10 +31,23 @@ import { sepCorto, sepLargo } from "./separadores.js";
     }
 
     public metodoDescripcionEstatica():void {
+
       console.log('Estoy en el metodoDescripcionEstatica()');
-      function mostrar() {
+
+      function mostrar1() {
         console.log('Método funcionDescripcionEstatica() / función mostrar(): ', StringData.descripcion);
-    }
+      };
+
+      mostrar1();
+
+      mostrar2: () => {};
+
+      (() => {
+        console.log('Método funcionDescripcionEstatica() / función mostrar() AUTOINVOCADA: ', StringData.descripcion);
+      })();
+
+
+
     }
   }
 
@@ -57,6 +70,6 @@ import { sepCorto, sepLargo } from "./separadores.js";
   console.log(StringData.descripcion);
 
   StringData.mostrarDescripcion();
-  texto2.metodoDescripcionEstatica().mostrar();
+  texto2.metodoDescripcionEstatica();
 
 })();
