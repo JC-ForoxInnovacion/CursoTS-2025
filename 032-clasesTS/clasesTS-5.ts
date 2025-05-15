@@ -38,16 +38,9 @@ import { sepCorto, sepLargo } from "./separadores.js";
         console.log('Método funcionDescripcionEstatica() / función mostrar(): ', StringData.descripcion);
       };
 
-      mostrar1();
-
-      mostrar2: () => {};
-
       (() => {
         console.log('Método funcionDescripcionEstatica() / función mostrar() AUTOINVOCADA: ', StringData.descripcion);
       })();
-
-
-
     }
   }
 
