@@ -46,7 +46,7 @@ import { sepCorto, sepLargo } from "./separadores.js";
     }
 
     static changeFirstName(nombre: string) {
-      this.firstName = nombre;
+      Nombre.instance.firstName = nombre;
     }
   }
 
@@ -57,8 +57,8 @@ import { sepCorto, sepLargo } from "./separadores.js";
 
   const oi = Nombre.changeFirstName('Olga');
   
-  jc = Nombre.changeFirstName('Juan Carlos');
-
+  Nombre.changeFirstName('Juan Carlos');
+  console.log({jc});
 
 
 })();

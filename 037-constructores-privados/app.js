@@ -15,14 +15,15 @@
             return Nombre.instance;
         }
         static changeFirstName(nombre) {
-            this.firstName = nombre;
+            Nombre.instance.firstName = nombre;
         }
     }
     let jc = Nombre.callNombre('José Carlos');
     console.log(typeof jc);
     const cd = Nombre.callNombre('Carmen');
     const oi = Nombre.changeFirstName('Olga');
-    jc = Nombre.changeFirstName('Juan Carlos');
+    Nombre.changeFirstName('Juan Carlos');
+    console.log({ jc });
 })();
 export {};
 //# sourceMappingURL=app.js.map
