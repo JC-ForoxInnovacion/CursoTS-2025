@@ -35,6 +35,7 @@
       this.arrSuma.push(a, b);
       this.suma = a + b;
       console.log('this.arrSuma:', this.arrSuma);
+      
     }
 
     /**
@@ -103,6 +104,7 @@
       const operacion = 'Resultado: ' + this.arrResta.join(' - ');
       console.log(`${operacion} = ${this.resta}`);
     }
+
   }
 
   // -------------------
