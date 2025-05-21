@@ -36,4 +36,4 @@
     console.log(jc.telefono[0].numero);
 })();
 export {};
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=app1.js.map
