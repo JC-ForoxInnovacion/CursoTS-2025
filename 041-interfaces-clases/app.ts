@@ -6,7 +6,7 @@ import { sepCorto, sepLargo } from "./separadores.js";
 interface IPersona {
   nombre: string,
   apellidos: string,
-  profesion: string,
+  profesion: string
 }
 
 interface IProfesion {
