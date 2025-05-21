@@ -18,12 +18,32 @@ import { sepCorto, sepLargo } from "./separadores.js";
 
 
   // Función Nombrada
+  //============
   interface agregarDosApellidos {
-    funcionAgregarDosApellidos(primerApellido: string, segundoApellido: string): string
+    (primerApellido: string, segundoApellido: string): string
   }
 
-  function funcionAgregarDosApellidos(primerApellido: string, segundoApellido: string) {
+  let miFuncion: agregarDosApellidos = function funcionAgregarDosApellidos(primerApellido: string, segundoApellido: string) {
     return primerApellido + ' ' + segundoApellido
   }
+
+  console.log(miFuncion('Alberto', 'Alvarez'));
+
+
+
+  //============
+  interface agregarDosApellidos2 {
+    funcionAgregarDosApellidos2(
+      primerApellido: string, 
+      segundoApellido: string): string;
+  }
+
+  const obj: agregarDosApellidos2 = {
+    funcionAgregarDosApellidos2(primerApellido, segundoApellido) {
+      return primerApellido + ' ' + segundoApellido;
+    } 
+  };
+
+  console.log(obj.funcionAgregarDosApellidos2('Gómez', 'Pérez'));
 
 })();
