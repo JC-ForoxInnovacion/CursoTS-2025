@@ -35,20 +35,25 @@ namespace Calculo {
   let numeros: number[] = [];
 
   let solicitarNumeros = () => {
-    let a:number = Number(prompt('Primer número'));
-    let b:number = Number(prompt('Segundo número'));
-    return {a,b}  
-  } 
-  
+    let a: number = Number(prompt("Primer número"));
+    let b: number = Number(prompt("Segundo número"));
+    return { a, b };
+  };
+
   let res = solicitarNumeros();
 
-  
-  let crearNumerosUsuario = (n1: number, n2:number): void {
-    numeros.push(n1,n2)
-    console.log('numeros en funcion', numeros);
-  }
-  
-  numeros = crearNumerosUsuario(res.a, res.b); 
-  console.log({numeros}); 
+  // ===================
+  let crearNumerosUsuario = (n1: number, n2: number): void => {
+    numeros.push(n1, n2);
+    console.log("numeros en funcion", numeros);
+  };
+
+  crearNumerosUsuario(res.a, res.b);
+  // ===================
+
+  export let mostrarArray = (): void => {
+    console.log({ numeros });
+  };
 }
 
+Calculo.mostrarArray();

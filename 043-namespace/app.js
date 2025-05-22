@@ -25,16 +25,19 @@ var Calculo;
 (function (Calculo) {
     let numeros = [];
     let solicitarNumeros = () => {
-        let a = Number(prompt('Primer número'));
-        let b = Number(prompt('Segundo número'));
+        let a = Number(prompt("Primer número"));
+        let b = Number(prompt("Segundo número"));
         return { a, b };
     };
     let res = solicitarNumeros();
     let crearNumerosUsuario = (n1, n2) => {
         numeros.push(n1, n2);
-        console.log('numeros en funcion', numeros);
+        console.log("numeros en funcion", numeros);
     };
-    numeros = crearNumerosUsuario(res.a, res.b);
-    console.log({ numeros });
+    crearNumerosUsuario(res.a, res.b);
+    Calculo.mostrarArray = () => {
+        console.log({ numeros });
+    };
 })(Calculo || (Calculo = {}));
+Calculo.mostrarArray();
 //# sourceMappingURL=app.js.map
