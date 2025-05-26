@@ -1,3 +1,31 @@
+Modificar tsconfig.json
+
+-------
+"outDir": "./044-modulos-y-webpack/dist/",
+
+"include": [
+  "./src/**/*"
+],
+-------
+
+
+En la terminal:
+
+-------
+
+rm -rf node_modules package-lock.json                                                                                    
+npm install webpack@5.88.2 webpack-cli@5.1.4 webpack-dev-server@4.15.1
+npm install
+-------
+
+
+
+Modificar webpack.config.js
+
+
+Eliminar todo el contenido y pegar el siguiente:
+
+-------
 const path = require('path');
 
 module.exports = {
@@ -31,3 +59,4 @@ module.exports = {
   },
   mode: 'development'
 };
+-------
